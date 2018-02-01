@@ -10,13 +10,14 @@ public class nrTelefoniczny implements Comparable<nrTelefoniczny> {
 
 	@Override
 	public int compareTo(nrTelefoniczny o) {
-		return 0;
+		int compare = getNr().compareTo(o.getNr());
+		return compare;
 	}
 
 	public String getNrTelefonu() {
 		return Long.toString(nrKieruntowy) + " " + Long.toString(nrTelefonu);
 	}
-	public long getNr() {
+	public Long getNr() {
 		return Long.parseLong(Long.toString(nrKieruntowy) + Long.toString(nrTelefonu));
 	}
 }
